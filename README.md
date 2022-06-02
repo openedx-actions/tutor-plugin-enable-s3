@@ -24,6 +24,8 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ENABLE_S3: true
 
     steps:
       # required antecedent
@@ -52,6 +54,9 @@ jobs:
       shell: bash
 
       # This action.
-      - name: Build the image and upload to AWS ECR
-        uses: openedx-actions/tutor-service-configure-redis
+      - name: Enable tutor plugin - S3
+        uses: openedx-actions/tutor-enable-plugin-s3
+        if: ${{ env.ENABLE_S3 == 'true' }}
+        with:
+          namespace: openedx-prod
 ```
