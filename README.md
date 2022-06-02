@@ -53,10 +53,10 @@ jobs:
         pip install tutor
       shell: bash
 
-      # This action.
-      - name: Enable tutor plugin - S3
-        uses: openedx-actions/tutor-enable-plugin-s3@v0.0.1
-        if: ${{ env.ENABLE_S3 == 'true' }}
-        with:
-          namespace: openedx-prod
+    # This action.
+    - name: Enable tutor plugin - S3
+      uses: openedx-actions/tutor-enable-plugin-s3@v0.0.1
+      if: ${{ env.ENABLE_S3 == 'true' }}
+      with:
+        namespace: openedx-prod
 ```
