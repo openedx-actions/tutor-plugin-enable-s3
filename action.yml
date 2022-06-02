@@ -47,11 +47,12 @@ runs:
     #      }
     #
     - name: fetch S3 secrets from Kubernetes secrets
+      shell: bash
       run: |-
         kubectl get secret s3-openedx-storage -n ${{ inputs.namespace }}  -o json | jq  '.data | map_values(@base64d)' | jq -r 'keys[] as $k | "TUTOR_\($k|ascii_upcase)=\(.[$k])"' >> $GITHUB_ENV
-      shell: bash
 
     - name: Enable plugin for S3
+      shell: bash
       run: |-
         pip install git+https://github.com/hastexo/tutor-contrib-s3@v0.2.2
         tutor plugins enable s3
@@ -60,7 +61,7 @@ runs:
                           --set OPENEDX_AWS_SECRET_ACCESS_KEY="$OPENEDX_AWS_SECRET_ACCESS_KEY" \
                           --set OPENEDX_AWS_QUERYSTRING_AUTH="False" \
                           --set OPENEDX_AWS_S3_SECURE_URLS="False" \
+                          --set OPENEDX_MEDIA_ROOT="openedx/media/" \
                           --set S3_STORAGE_BUCKET="$S3_STORAGE_BUCKET" \
                           --set S3_CUSTOM_DOMAIN="$S3_CUSTOM_DOMAIN" \
-                          --set S3_REGION="$S3_REGION"
-      shell: bash
+                          --set S3_REGION="$S3_REGION" \
