@@ -9,7 +9,7 @@
 
 # tutor-plugin-enable-s3
 
-Github Action to install and enable the Tutor plugin tutor-contrib-s3 created by hastexo, noting however that this action uses a fork of the repository: [lpm0073/tutor-contrib-s3](https://github.com/lpm0073/tutor-contrib-s3.git@v14.0.2).
+Github Action to install and enable the Tutor plugin tutor-contrib-s3 created by hastexo, noting however that this action uses a fork of the repository: [lpm0073/tutor-contrib-s3](https://github.com/lpm0073/tutor-contrib-s3.git).
 
 This action is designed to work seamlessly with Kubernetes secrets created by the Terraform modules contained in [Cookiecutter Tutor Open edX Production Devops Tools](https://github.com/lpm0073/cookiecutter-openedx-devops).
 
