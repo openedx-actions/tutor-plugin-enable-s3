@@ -9,9 +9,11 @@
 
 # tutor-plugin-enable-s3
 
-Github Action to install and enable the Tutor plugin hastexo/tutor-contrib-s3
+Github Action to install and enable the Tutor plugin tutor-contrib-s3 created by hastexo, noting however that this action uses a fork of the repository: [lpm0073/tutor-contrib-s3](https://github.com/lpm0073/tutor-contrib-s3.git@v14.0.2).
 
+This action is designed to work seamlessly with Kubernetes secrets created by the Terraform modules contained in [Cookiecutter Tutor Open edX Production Devops Tools](https://github.com/lpm0073/cookiecutter-openedx-devops).
 
+**IMPORTANT SECURITY DISCLAIMER**: Sensitive data contained in Kubernetes secrets is masked in Github Actions logs and console output provided that the secret was created with the Terraform scripts provided in the Cookiecutter. If you are working a Kubernetes secret created outside of the Cookiecutter then **be aware that you run a non-zero risk of your sensitive data becoming exposed inside the Github Actions log data and/or console output**.
 
 ## Usage:
 
@@ -38,11 +40,19 @@ jobs:
 
       # install and configure tutor and kubectl
       - name: Configure Github workflow environment
-        uses: openedx-actions/tutor-k8s-init@v0.0.13
+        uses: openedx-actions/tutor-k8s-init@v1.0.0
+
+      #
+      # ... steps to deploy your Open edX instance to k8s ...
+      #
 
       # This action.
       - name: Enable tutor plugin - S3
-        uses: openedx-actions/tutor-enable-plugin-s3@v0.0.6
+        uses: openedx-actions/tutor-enable-plugin-s3@v1.0.0
         with:
           namespace: openedx-prod
+
+      #
+      # ... more steps to deploy your Open edX instance to k8s ...
+      #
 ```
