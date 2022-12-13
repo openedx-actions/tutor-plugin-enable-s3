@@ -15,7 +15,7 @@ runs:
   using: "composite"
   steps:
     - name: Checkout
-      uses: actions/checkout@v3.1.0
+      uses: actions/checkout@v3.2.0
 
     # Notes: OPENEDX_AWS_ACCESS_KEY, OPENEDX_AWS_SECRET_ACCESS_KEY and S3_STORAGE_BUCKET
     #        are stored in EKS kubernetes secrets, viewable from k9s.
