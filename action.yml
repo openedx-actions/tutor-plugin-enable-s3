@@ -56,7 +56,7 @@ runs:
     - name: install plugin
       id: install-plugin
       shell: bash
-      run: pip install git+https://github.com/lpm0073/tutor-contrib-s3.git@v14.0.2
+      run: pip install git+https://github.com/hastexo/tutor-contrib-s3@v1.0.0
 
     - name: Enable plugin
       shell: bash
