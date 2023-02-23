@@ -41,7 +41,7 @@ runs:
     #                      "s3:GetObject*",
     #                      "s3:List*"
     #                  ],
-    #                  "Resource": "arn:aws:s3:::prod-mrionline-global-storage/*"
+    #                  "Resource": "arn:aws:s3:::prod-yourschool-global-storage/*"
     #              }
     #          ]
     #      }
