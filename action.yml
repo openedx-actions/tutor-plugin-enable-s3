@@ -22,10 +22,10 @@ runs:
     #        example values:
     #          OPENEDX_AWS_ACCESS_KEY: ABDCE123456789OHBBGQ
     #          OPENEDX_AWS_SECRET_ACCESS_KEY: A123456789srJ8lgel+ABCDEFGHIJKabcdefghijk
-    #          S3_STORAGE_BUCKET: mrionline-global-prod-storage
-    #          S3_BACKUP_BUCKET: mrionline-global-prod-backup
-    #          S3_CUSTOM_DOMAIN: cdn.app.mrionline.com
-    #          S3_REGION: us-east-2
+    #          S3_STORAGE_BUCKET: yourschool-global-prod-storage
+    #          S3_BACKUP_BUCKET: yourschool-global-prod-backup
+    #          S3_CUSTOM_DOMAIN: cdn.courses.yourschool.edu
+    #          S3_REGION: us-east-1
     #
     # this config depends on a public read-only AWS S3 bucket policy like this:
     # https://github.com/Medality-Health/terraform-openedx/blob/main/components/s3/main.tf#L19
