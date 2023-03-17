@@ -89,7 +89,7 @@ runs:
     #
     - name: fetch S3 secrets from Kubernetes secrets
       id: get-secret
-      uses: openedx-actions/tutor-k8s-get-secret@v0.0.7
+      uses: openedx-actions/tutor-k8s-get-secret@v1.0.0
       with:
         eks-namespace: ${{ inputs.namespace }}
         eks-secret-name: s3-openedx-storage
@@ -97,7 +97,7 @@ runs:
     - name: install plugin
       id: install-plugin
       shell: bash
-      run: pip install git+https://github.com/hastexo/tutor-contrib-s3.git
+      run: pip install git+https://github.com/hastexo/tutor-contrib-s3.git@v1.0.0
 
     - name: Enable plugin
       shell: bash

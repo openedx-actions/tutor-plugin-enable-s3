@@ -48,7 +48,7 @@ jobs:
 
       # This action.
       - name: Enable tutor plugin - S3
-        uses: openedx-actions/tutor-enable-plugin-s3@v1.0.4
+        uses: openedx-actions/tutor-enable-plugin-s3@v1.0.5
         with:
           namespace: openedx-prod
           s3_host: ""
