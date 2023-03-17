@@ -114,9 +114,9 @@ runs:
                           --set S3_HOST="${{ inputs.s3_host }}" \
                           --set S3_PORT="${{ inputs.s3_port }}" \
                           --set S3_USE_SSL="${{ inputs.s3_use_ssl }}" \
-                          --set S3_FILE_UPLOAD_BUCKET="${{ inputs.s3_file_upload_bucket || $S3_STORAGE_BUCKET }}" \
-                          --set S3_PROFILE_IMAGE_BUCKET="${{ inputs.s3_profile_image_bucket || $S3_STORAGE_BUCKET }}" \
-                          --set S3_GRADE_BUCKET=="${{ inputs.s3_grade_bucket || $S3_STORAGE_BUCKET }}" \
+                          --set S3_FILE_UPLOAD_BUCKET="${{ inputs.s3_file_upload_bucket }}" || "$S3_STORAGE_BUCKET" \
+                          --set S3_PROFILE_IMAGE_BUCKET="${{ inputs.s3_profile_image_bucket }}" || "$S3_STORAGE_BUCKET" \
+                          --set S3_GRADE_BUCKET="${{ inputs.s3_grade_bucket }}" || "$S3_STORAGE_BUCKET" \
                           --set S3_PROFILE_IMAGE_CUSTOM_DOMAIN="${{ inputs.s3_profile_image_custom_domain }}" \
                           --set S3_PROFILE_IMAGE_MAX_AGE="${{ inputs.s3_profile_image_max_age }}" \
                           --set S3_ADDRESSING_STYLE="${{ inputs.s3_addressing_style }}" \
