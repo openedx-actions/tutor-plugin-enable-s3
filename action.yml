@@ -53,10 +53,11 @@ runs:
         eks-namespace: ${{ inputs.namespace }}
         eks-secret-name: s3-openedx-storage
 
+    #  run: pip install git+https://github.com/cookiecutter-openedx/tutor-contrib-s3.git@v14.0.3
     - name: install plugin
       id: install-plugin
       shell: bash
-      run: pip install git+https://github.com/cookiecutter-openedx/tutor-contrib-s3.git@v14.0.3
+      run: pip install git+https://github.com/cookiecutter-openedx/tutor-contrib-s3.git
 
 
     # TO DO: add these
