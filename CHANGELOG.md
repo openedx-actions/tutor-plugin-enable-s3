@@ -1,6 +1,12 @@
 # CHANGE LOG
 
+## Version 1.0.6 (2023-3-23)
+
+- switch to https://github.com/cookiecutter-openedx/tutor-contrib-s3
+
 ## Version 1.0.5 (2023-3-17)
+
+THIS HAS BEEN YANKED.
 
 - repin to github.com/hastexo/tutor-contrib-s3.git@v1.0.0. After unpinning, the boto3 problem resurfaced, about
 a leading "/" appearing on OPENEDX_MEDIA_ROOT.
@@ -14,9 +20,15 @@ Note: tutor's treatment of this setting has varied over time.
 
 ## Version 1.0.4 (2023-3-16)
 
+THIS HAS BEEN YANKED.
+
 - removed fork. install hastexo from main branch
 - add all input parameters from hastexo/tutor-contrib-s3
 - Bump actions/checkout from 3.3.0 to 3.4.0
+
+## Version 1.0.3
+
+THIS HAS BEEN YANKED.
 
 ## Version 1.0.2 (2022-12-16)
 

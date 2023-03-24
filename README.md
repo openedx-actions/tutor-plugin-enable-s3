@@ -48,19 +48,9 @@ jobs:
 
       # This action.
       - name: Enable tutor plugin - S3
-        uses: openedx-actions/tutor-enable-plugin-s3@v1.0.5
+        uses: openedx-actions/tutor-enable-plugin-s3@v1.0.6
         with:
           namespace: openedx-prod
-          s3_host: ""
-          s3_port: ""
-          s3_use_ssl: true
-          s3_file_upload_bucket: ""
-          s3_profile_image_bucket: ""
-          s3_grade_bucket: ""
-          s3_profile_image_custom_domain: ""
-          s3_profile_image_max_age: 31536000
-          s3_addressing_style: "auto"
-          s3_signature_version: "s3v4"
 
       #
       # ... more steps to deploy your Open edX instance to k8s ...
