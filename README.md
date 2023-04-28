@@ -16,8 +16,7 @@ This action is designed to work seamlessly with Kubernetes secrets created by th
 
 **IMPORTANT SECURITY DISCLAIMER**: Sensitive data contained in Kubernetes secrets is masked in Github Actions logs and console output provided that the secret was created with the Terraform scripts provided in the Cookiecutter. If you are working a Kubernetes secret created outside of the Cookiecutter then **be aware that you run a non-zero risk of your sensitive data becoming exposed inside the Github Actions log data and/or console output**.
 
-## Usage:
-
+## Usage
 
 ```yaml
 name: Example workflow
